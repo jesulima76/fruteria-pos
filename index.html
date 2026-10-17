@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Frutería POS</title><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header><div><h1>Frutería POS</h1><p>Punto de venta · Inventario · Ventas</p></div><span id="status" class="status">Conectando…</span></header>
+<main>
+  <section class="panel">
+    <div class="section-head"><h2>Productos</h2><input id="search" placeholder="Buscar producto…" aria-label="Buscar producto"></div>
+    <div id="products" class="products"><p>Cargando productos…</p></div>
+  </section>
+  <section class="panel cart-panel">
+    <h2>Venta actual</h2><div id="cart"><p class="muted">Agrega productos para comenzar.</p></div>
+    <div class="total-row"><span>Total</span><strong id="total">$0.00</strong></div>
+    <label for="payment">Método de pago</label>
+    <select id="payment"><option value="Efectivo">Efectivo</option><option value="Tarjeta">Tarjeta</option><option value="Transferencia">Transferencia</option><option value="Pago móvil">Pago móvil</option></select>
+    <label for="amountPaid">Monto recibido (opcional)</label><input id="amountPaid" type="number" min="0" step="0.01" placeholder="0.00">
+    <p id="change" class="muted">Cambio: $0.00</p>
+    <button id="checkout" class="primary">Registrar venta</button><button id="clear" class="secondary">Vaciar carrito</button>
+  </section>
+</main>
+<section class="panel history-panel"><div class="section-head"><h2>Últimas ventas</h2><button id="refresh" class="secondary">Actualizar</button></div><div id="sales"><p class="muted">Cargando…</p></div></section>
+<footer>Los datos se guardan en tu hoja de cálculo de Google.</footer>
+<script src="/app.js"></script>
+</body></html>
